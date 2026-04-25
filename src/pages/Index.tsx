@@ -332,6 +332,49 @@ export default function Index() {
           </div>
         </section>
 
+        {/* RECEPTION SCHEDULE */}
+        <section id="reception">
+          <SectionTitle title="Приём граждан" />
+          <div className="bg-white rounded border overflow-hidden" style={{ borderColor: "var(--gov-border)" }}>
+            <div className="px-5 py-3 text-sm font-medium text-white" style={{ backgroundColor: "var(--gov-blue)" }}>
+              График приёма населения работниками администрации муниципального образования Паустовское
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr style={{ backgroundColor: "#eaf0f7" }}>
+                    <th className="text-left px-4 py-2.5 font-semibold" style={{ color: "var(--gov-blue)", borderBottom: "1px solid var(--gov-border)", width: "50%" }}>Фамилия, имя, отчество / должность</th>
+                    <th className="text-left px-4 py-2.5 font-semibold" style={{ color: "var(--gov-blue)", borderBottom: "1px solid var(--gov-border)" }}>Дни приёма</th>
+                    <th className="text-left px-4 py-2.5 font-semibold" style={{ color: "var(--gov-blue)", borderBottom: "1px solid var(--gov-border)" }}>Время приёма</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { name: "Фунтов Денис Сергеевич", role: "глава местной администрации", day: "Каждый вторник", time: "09:00 – 12:00" },
+                    { name: "Федоров Сергей Анатольевич", role: "заместитель главы по вопросам ЖКХ", day: "Каждый понедельник", time: "09:00 – 12:00" },
+                    { name: "Сергеева Светлана Валентиновна", role: "заместитель главы по социальным вопросам", day: "Каждый понедельник", time: "09:00 – 12:00" },
+                    { name: "Власова Ольга Вячеславовна", role: "главный специалист по вопросам ЖКХ", day: "Каждый понедельник", time: "09:00 – 12:00" },
+                    { name: "Павлова Галина Николаевна", role: "заведующий отделом по работе с населением", day: "Каждый понедельник", time: "09:00 – 12:00" },
+                  ].map((row, i) => (
+                    <tr key={row.name} style={{ backgroundColor: i % 2 === 1 ? "#f7f9fb" : "white" }}>
+                      <td className="px-4 py-3" style={{ borderBottom: "1px solid var(--gov-border)" }}>
+                        <div className="font-medium" style={{ color: "var(--gov-blue)" }}>{row.name}</div>
+                        <div className="text-xs text-gray-500 mt-0.5">{row.role}</div>
+                      </td>
+                      <td className="px-4 py-3 text-gray-700" style={{ borderBottom: "1px solid var(--gov-border)" }}>{row.day}</td>
+                      <td className="px-4 py-3 font-medium" style={{ borderBottom: "1px solid var(--gov-border)", color: "var(--gov-blue)" }}>{row.time}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="px-5 py-3 text-xs text-gray-600 space-y-1" style={{ backgroundColor: "#f7f9fb", borderTop: "1px solid var(--gov-border)" }}>
+              <div>Приём граждан специалистами ведётся <strong>постоянно в течение рабочего дня</strong> с 09:00 до 16:30 (перерыв с 12:00 до 13:00)</div>
+              <div style={{ color: "var(--gov-red)" }}>Пятница — неприёмный день. Суббота, воскресенье — выходной день.</div>
+            </div>
+          </div>
+        </section>
+
         {/* NEWS */}
         <section id="news">
           <SectionTitle title="Новости" />
