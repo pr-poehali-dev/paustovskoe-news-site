@@ -243,12 +243,21 @@ export default function Index() {
                 ))}
               </div>
               <div className="bg-white p-4 rounded" style={{ borderLeft: "4px solid var(--gov-gold)" }}>
-                <div className="text-xs uppercase tracking-wide mb-1" style={{ color: "var(--gov-gold)" }}>Важно</div>
-                <div className="text-sm" style={{ color: "var(--gov-blue)" }}>
-                  <div className="font-semibold mb-1">Приём граждан</div>
-                  <div className="text-xs text-gray-600">Вторник: 14:00 – 17:00</div>
-                  <div className="text-xs text-gray-600">Четверг: 09:00 – 12:00</div>
-                  <div className="mt-2 text-xs font-medium" style={{ color: "var(--gov-red)" }}>☎ 8 (800) 000-00-00</div>
+                <div className="text-xs uppercase tracking-wide mb-2" style={{ color: "var(--gov-gold)" }}>Приём граждан</div>
+                <div className="text-xs space-y-2" style={{ color: "var(--gov-blue)" }}>
+                  {[
+                    { name: "Фунтов Д.С., глава администрации", day: "Каждый вторник", time: "09:00 – 12:00" },
+                    { name: "Федоров С.А., зам. главы по ЖКХ", day: "Каждый понедельник", time: "09:00 – 12:00" },
+                    { name: "Сергеева С.В., зам. главы по соц. вопросам", day: "Каждый понедельник", time: "09:00 – 12:00" },
+                  ].map((r) => (
+                    <div key={r.name} className="pb-1.5" style={{ borderBottom: "1px solid var(--gov-border)" }}>
+                      <div className="font-medium leading-tight">{r.name}</div>
+                      <div className="text-gray-500 mt-0.5">{r.day}, {r.time}</div>
+                    </div>
+                  ))}
+                  <div className="text-gray-500 pt-0.5">
+                    Специалисты: пн–чт 09:00–16:30, пятница — неприёмный день
+                  </div>
                 </div>
               </div>
             </div>
@@ -290,15 +299,15 @@ export default function Index() {
             <div className="space-y-3">
               <div className="bg-white p-4 rounded border" style={{ borderColor: "var(--gov-border)" }}>
                 <div className="text-xs uppercase tracking-wide mb-2 font-semibold" style={{ color: "var(--gov-gold)" }}>Глава администрации</div>
-                <div className="text-sm font-bold" style={{ color: "var(--gov-blue)" }}>Иванов Иван Иванович</div>
-                <div className="text-xs text-gray-500 mt-1">Вступил в должность: 15.03.2022</div>
+                <div className="text-sm font-bold" style={{ color: "var(--gov-blue)" }}>Фунтов Денис Сергеевич</div>
+                <div className="text-xs text-gray-500 mt-1">Глава местной администрации</div>
               </div>
               <div className="bg-white p-4 rounded border" style={{ borderColor: "var(--gov-border)" }}>
                 <div className="text-xs uppercase tracking-wide mb-2 font-semibold" style={{ color: "var(--gov-gold)" }}>Режим работы</div>
                 <div className="text-xs text-gray-700 space-y-1">
                   {[
-                    { d: "Пн – Чт", t: "08:30 – 17:30" },
-                    { d: "Пятница", t: "08:30 – 16:30" },
+                    { d: "Пн – Чт", t: "09:00 – 16:30" },
+                    { d: "Пятница", t: "неприёмный день" },
                     { d: "Сб – Вс", t: "Выходной" },
                     { d: "Обед", t: "12:00 – 13:00" },
                   ].map((r) => (
