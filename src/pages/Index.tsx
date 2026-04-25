@@ -122,7 +122,7 @@ export default function Index() {
       {/* Top info bar */}
       <div className="text-white text-xs py-1.5 px-4" style={{ backgroundColor: "var(--gov-blue-dark)" }}>
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-          <span>⚠ Данный сайт является демонстрационным и не является официальным</span>
+          <span>⚠ Данный сайт является демонстрационным, новостным и не является официальным</span>
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">
               <Icon name="Phone" size={12} />
