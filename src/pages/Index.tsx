@@ -122,7 +122,7 @@ export default function Index() {
       {/* Top info bar */}
       <div className="text-white text-xs py-1.5 px-4" style={{ backgroundColor: "var(--gov-blue-dark)" }}>
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-          <span>Официальный сайт муниципального образования</span>
+          <span>⚠ Данный сайт является демонстрационным и не является официальным</span>
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">
               <Icon name="Phone" size={12} />
@@ -152,7 +152,7 @@ export default function Index() {
                 Администрация муниципального образования
               </h1>
               <div className="text-sm mt-0.5" style={{ color: "#6b7a8d" }}>
-                Официальный сайт органа местного самоуправления
+                Демонстрационный сайт · Не является официальным
               </div>
             </div>
             <div className="ml-auto hidden md:flex flex-col overflow-hidden rounded" style={{ width: 48, height: 32 }}>
