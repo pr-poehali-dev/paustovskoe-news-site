@@ -78,7 +78,7 @@ export default function Index() {
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">
               <Icon name="Phone" size={12} />
-              8 (800) 000-00-00
+              +7 (953) 325-95-22
             </span>
             <span className="flex items-center gap-1">
               <Icon name="Mail" size={12} />
@@ -226,7 +226,7 @@ export default function Index() {
               </h3>
               <p className="text-sm text-gray-700 leading-relaxed mb-4">
                 Муниципальное образование расположено в живописном районе Российской Федерации.
-                Образовано в соответствии с Федеральным законом «Об общих принципах организации
+                Образовано 16 мая 2005 года в соответствии с Федеральным законом «Об общих принципах организации
                 местного самоуправления в Российской Федерации». На территории МО проживает
                 около 4 500 человек.
               </p>
@@ -238,8 +238,8 @@ export default function Index() {
               <div className="mt-5 grid grid-cols-3 gap-4 pt-4" style={{ borderTop: "1px solid var(--gov-border)" }}>
                 {[
                   { num: "4 500", label: "Жителей" },
-                  { num: "12", label: "Населённых пунктов" },
-                  { num: "2006", label: "Год образования" },
+                  { num: "42", label: "Населённых пунктов" },
+                  { num: "2005", label: "Год образования" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="text-2xl font-bold" style={{ color: "var(--gov-blue)", fontFamily: "'PT Serif', serif" }}>{stat.num}</div>
@@ -454,8 +454,8 @@ export default function Index() {
                 <div className="space-y-3 text-sm">
                   {[
                     { icon: "MapPin", label: "Адрес", val: "123456, РФ, [Субъект], [МО], ул. Советская, д. 1" },
-                    { icon: "Phone", label: "Телефон приёмной", val: "8 (800) 000-00-00" },
-                    { icon: "Phone", label: "Факс", val: "8 (800) 000-00-01" },
+                    { icon: "Phone", label: "Телефон приёмной", val: "+7 (953) 325-95-22" },
+                    { icon: "Phone", label: "Факс", val: "+7 (953) 325-95-22" },
                     { icon: "Mail", label: "Электронная почта", val: "admin@mo-official.ru" },
                     { icon: "Globe", label: "Сайт", val: "www.mo-official.ru" },
                   ].map((row) => (
@@ -535,7 +535,7 @@ export default function Index() {
             <div>
               <div className="text-xs uppercase tracking-wider mb-3 font-semibold" style={{ color: "var(--gov-gold)" }}>Контакты</div>
               <div className="text-xs text-white/70 space-y-1.5">
-                <div>8 (800) 000-00-00</div>
+                <div>+7 (953) 325-95-22</div>
                 <div>admin@mo-official.ru</div>
                 <div className="pt-1">Пн–Чт: 08:30 – 17:30</div>
                 <div>Пт: 08:30 – 16:30</div>
